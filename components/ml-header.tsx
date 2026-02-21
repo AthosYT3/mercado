@@ -16,9 +16,9 @@ export function MLHeader() {
             <Image
               src="/images/logo.png"
               alt="Mercado Livre"
-              width={220}
-              height={75}
-              className="h-20 w-auto object-contain"
+              width={120}
+              height={40}
+              className="h-10 w-auto object-contain"
               priority
             />
           </div>
