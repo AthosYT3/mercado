@@ -1,16 +1,33 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useCallback } from "react"
 import { Heart, Share2, ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 
 const productImages = [
   "/images/perfume.webp",
+  "/images/perfume-2.webp",
+  "/images/perfume-3.webp",
+  "/images/perfume-4.webp",
+  "/images/perfume-5.webp",
 ]
 
 export function ProductGallery() {
   const [currentImage, setCurrentImage] = useState(0)
   const [isFavorited, setIsFavorited] = useState(false)
+  const touchStartX = useRef(0)
+  const touchEndX = useRef(0)
+
+  const handleSwipe = useCallback(() => {
+    const diff = touchStartX.current - touchEndX.current
+    if (Math.abs(diff) > 50) {
+      if (diff > 0 && currentImage < productImages.length - 1) {
+        setCurrentImage((prev) => prev + 1)
+      } else if (diff < 0 && currentImage > 0) {
+        setCurrentImage((prev) => prev - 1)
+      }
+    }
+  }, [currentImage])
 
   return (
     <div className="bg-card">
@@ -60,13 +77,18 @@ export function ProductGallery() {
 
       {/* Image Gallery */}
       <div className="relative mt-3">
-        <div className="relative aspect-square w-full overflow-hidden">
+        <div
+          className="relative aspect-square w-full overflow-hidden"
+          onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX }}
+          onTouchMove={(e) => { touchEndX.current = e.touches[0].clientX }}
+          onTouchEnd={handleSwipe}
+        >
           <Image
             src={productImages[currentImage]}
-            alt="Perfume Club De Nuit Intense Da Armaf Edt 105ml"
+            alt={`Perfume Club De Nuit Intense Da Armaf Edt 105ml - Imagem ${currentImage + 1} de ${productImages.length}`}
             fill
             className="object-contain p-6"
-            priority
+            priority={currentImage === 0}
           />
 
           {/* Favorite Button */}
@@ -135,28 +157,18 @@ export function ProductGallery() {
 
         {/* Dot Indicators */}
         <div className="flex items-center justify-center gap-2 pb-3 pt-2">
-          {productImages.length > 1
-            ? productImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentImage(index)}
-                  className={`h-2 w-2 rounded-full ${
-                    index === currentImage ? "bg-primary" : "bg-border"
-                  }`}
-                  aria-label={`Ir para imagem ${index + 1}`}
-                />
-              ))
-            : (
-              <div className="flex items-center gap-2">
-                <div className="h-2 w-2 rounded-full bg-primary" />
-                <div className="flex h-2 w-2 items-center justify-center rounded-full bg-card-foreground">
-                  <div className="h-0 w-0 border-l-[3px] border-t-[2px] border-b-[2px] border-l-card border-t-transparent border-b-transparent ml-[1px]" />
-                </div>
-                <div className="h-1.5 w-1.5 rounded-full bg-border" />
-                <div className="h-1.5 w-1.5 rounded-full bg-border" />
-                <div className="h-1.5 w-1.5 rounded-full bg-border" />
-              </div>
-            )}
+          {productImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImage(index)}
+              className={`rounded-full transition-all ${
+                index === currentImage
+                  ? "h-2.5 w-2.5 bg-primary"
+                  : "h-2 w-2 bg-border"
+              }`}
+              aria-label={`Ir para imagem ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
     </div>
