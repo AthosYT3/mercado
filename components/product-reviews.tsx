@@ -79,7 +79,7 @@ export function ProductRatingOverview() {
   return (
     <section className="bg-card px-4 py-5">
       <h2 className="mb-4 text-lg font-semibold text-card-foreground">
-        {"Opinioes do produto"}
+        {"Opiniões do produto"}
       </h2>
 
       <div className="flex gap-6">
@@ -88,7 +88,7 @@ export function ProductRatingOverview() {
           <span className="text-5xl font-bold text-card-foreground">4.8</span>
           <StarRating rating={5} size="md" />
           <span className="mt-1 text-xs text-muted-foreground">
-            {"3.216 avaliacoes"}
+            {"3.216 avaliações"}
           </span>
         </div>
 
@@ -116,7 +116,7 @@ export function ProductRatingOverview() {
       {/* Additional Ratings */}
       <div className="mt-4 flex flex-col gap-2 border-t border-border pt-4">
         <div className="flex items-center justify-between">
-          <span className="text-sm text-muted-foreground">{"Duracao do aroma"}</span>
+          <span className="text-sm text-muted-foreground">{"Duração do aroma"}</span>
           <HalfStarRating rating={4.5} />
         </div>
         <div className="flex items-center justify-between">
@@ -134,7 +134,7 @@ export function ProductReviews() {
       id: 1,
       rating: 5,
       date: "03 jul. 2025",
-      text: "A fragrancia e perfeita. Comprei sem saber se ia gostar, realmente me surpreendeu. Uma borrifada apenas para testar e o cheiro ficou por muitas horas, otima fixacao. Na hora que borrifa ele exala um cheiro forte, depois de alguns minutos ele vai se adaptando ate ficar no aroma perfeito, e amadeirado, mas nao e daqueles que sao muito fortes. E surreal. Com certeza vou comprar mais. Detalhe: e original, comprem sem medo.",
+      text: "A fragrância é perfeita. Comprei sem saber se ia gostar, realmente me surpreendeu. Uma borrifada apenas para testar e o cheiro ficou por muitas horas, ótima fixação. Na hora que borrifa ele exala um cheiro forte, depois de alguns minutos ele vai se adaptando até ficar no aroma perfeito, é amadeirado, mas não é daqueles que são muito fortes. É surreal. Com certeza vou comprar mais. Detalhe: é original, comprem sem medo.",
       helpful: 89,
       hasImages: true,
       images: [
@@ -147,7 +147,7 @@ export function ProductReviews() {
       id: 2,
       rating: 5,
       date: "09 ago. 2025",
-      text: "Produto 100% original, fiz todos os testes, o da valvula que a principal tirando a tampa e o bico nao sendo reto, e com certeza original e o cheiro e muito bom falam muito da saida mas ate que nao achei ruim na saida nao mas depois de uns minutos de fato fica muito bom, podem comprar sem medo, e o produto foi enviado com cuidado enrolado no plastico bolha e ainda colocou algum cheirinho bom, aprovado!.",
+      text: "Produto 100% original, fiz todos os testes, o da válvula que é a principal tirando a tampa e o bico não sendo reto, é com certeza original e o cheiro é muito bom falam muito da saída mas até que não achei ruim na saída não mas depois de uns minutos de fato fica muito bom, podem comprar sem medo, e o produto foi enviado com cuidado enrolado no plástico bolha e ainda colocou algum cheirinho bom, aprovado!.",
       helpful: 39,
       hasImages: true,
       images: [
@@ -159,7 +159,7 @@ export function ProductReviews() {
       id: 3,
       rating: 5,
       date: "21 abr. 2025",
-      text: "O perfume e simplesmente maravilhoso, em relacao ao creedy aventury, 9. 4 e a minha nota super recomendo.",
+      text: "O perfume é simplesmente maravilhoso, em relação ao Creed Aventus, 9.4 é a minha nota, super recomendo.",
       helpful: 25,
       hasImages: true,
       images: [
@@ -173,9 +173,9 @@ export function ProductReviews() {
       <div className="mb-4 flex items-center justify-between">
         <div>
           <h2 className="text-lg font-semibold text-card-foreground">
-            {"Opinioes em destaque"}
+            {"Opiniões em destaque"}
           </h2>
-          <p className="text-xs text-muted-foreground">{"1.618 comentarios"}</p>
+          <p className="text-xs text-muted-foreground">{"1.618 comentários"}</p>
         </div>
         <button className="flex items-center gap-1 text-sm font-semibold text-primary">
           <Filter className="h-4 w-4" />
@@ -230,11 +230,11 @@ export function ProductReviews() {
             {/* Review Actions */}
             <div className="flex items-center justify-between">
               <button className="flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs text-muted-foreground hover:bg-muted transition-colors">
-                {"E util"}
+                {"É útil"}
                 <ThumbsUp className="h-3 w-3" />
                 {review.helpful}
               </button>
-              <button className="text-muted-foreground" aria-label="Mais opcoes">
+              <button className="text-muted-foreground" aria-label="Mais opções">
                 <MoreVertical className="h-4 w-4" />
               </button>
             </div>
