@@ -100,7 +100,7 @@ export function PaymentMethods() {
     { name: "Hipercard", src: "/images/hipercard.svg" },
     { name: "American Express", src: "/images/amex.svg" },
     { name: "Elo", src: "/images/elo.svg" },
-    { name: "Visa", src: "/images/visa.svg" },
+    { name: "Visa", src: "/images/visa.png" },
     { name: "Pix", src: "/images/pix.svg" },
     { name: "Boleto", src: "/images/boleto.svg" },
   ]
