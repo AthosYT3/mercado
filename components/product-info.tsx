@@ -95,27 +95,34 @@ export function ProductDescription() {
 }
 
 export function PaymentMethods() {
+  const methods = [
+    { name: "Mercado Pago", src: "/images/mercadopago.svg" },
+    { name: "Hipercard", src: "/images/hipercard.svg" },
+    { name: "American Express", src: "/images/amex.svg" },
+    { name: "Elo", src: "/images/elo.svg" },
+    { name: "Visa", src: "/images/visa.svg" },
+    { name: "Pix", src: "/images/pix.svg" },
+    { name: "Boleto", src: "/images/boleto.svg" },
+  ]
+
   return (
     <section className="bg-card px-4 py-5">
       <h2 className="mb-4 text-lg font-semibold text-card-foreground">
         Meios de pagamento
       </h2>
-      <div className="grid grid-cols-5 gap-2">
-        {[
-          { name: "Mercado Pago", color: "bg-[#00b1ea]", text: "MP" },
-          { name: "Hipercard", color: "bg-[#822124]", text: "HC" },
-          { name: "American Express", color: "bg-[#006fcf]", text: "AE" },
-          { name: "Elo", color: "bg-card", text: "elo", textColor: "text-card-foreground" },
-          { name: "Visa", color: "bg-card", text: "VISA", textColor: "text-[#1a1f71]" },
-          { name: "Pix", color: "bg-[#32bcad]", text: "Pix" },
-          { name: "Boleto", color: "bg-card", text: "Boleto", textColor: "text-card-foreground" },
-        ].map((method) => (
+      <div className="flex flex-wrap gap-2">
+        {methods.map((method) => (
           <div
             key={method.name}
-            className={`flex h-8 items-center justify-center rounded border border-border text-[10px] font-bold ${method.color} ${method.textColor || "text-card"}`}
+            className="flex h-9 w-14 items-center justify-center rounded border border-border bg-card"
             aria-label={method.name}
           >
-            {method.text}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={method.src}
+              alt={method.name}
+              className="h-8 w-auto max-w-[48px] object-contain"
+            />
           </div>
         ))}
       </div>
