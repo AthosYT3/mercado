@@ -108,9 +108,14 @@ export function PurchaseSection() {
 
       {/* Action Buttons */}
       <div className="mt-4 flex flex-col gap-2 px-4 pb-4">
-        <button className="w-full rounded-md bg-primary py-4 text-base font-semibold text-primary-foreground hover:opacity-90 transition-opacity">
+        <a
+          href="https://go.plataformafortpay.com.br/pyawiw2end"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full rounded-md bg-primary py-4 text-base font-semibold text-primary-foreground hover:opacity-90 transition-opacity text-center block"
+        >
           Comprar agora
-        </button>
+        </a>
       </div>
 
       {/* Seller Info */}
