@@ -137,6 +137,11 @@ export function ProductReviews() {
       text: "A fragrancia e perfeita. Comprei sem saber se ia gostar, realmente me surpreendeu. Uma borrifada apenas para testar e o cheiro ficou por muitas horas, otima fixacao. Na hora que borrifa ele exala um cheiro forte, depois de alguns minutos ele vai se adaptando ate ficar no aroma perfeito, e amadeirado, mas nao e daqueles que sao muito fortes. E surreal. Com certeza vou comprar mais. Detalhe: e original, comprem sem medo.",
       helpful: 89,
       hasImages: true,
+      images: [
+        "/images/review1-1.webp",
+        "/images/review1-2.webp",
+        "/images/review1-3.webp",
+      ],
     },
     {
       id: 2,
@@ -180,17 +185,33 @@ export function ProductReviews() {
               <span className="text-xs text-muted-foreground">{review.date}</span>
             </div>
 
-            {/* Review Images Placeholder */}
+            {/* Review Images */}
             {review.hasImages && (
               <div className="flex gap-2">
-                {[1, 2, 3].slice(0, review.id === 3 ? 1 : review.id === 1 ? 3 : 2).map((img) => (
-                  <div
-                    key={img}
-                    className="h-16 w-16 overflow-hidden rounded bg-muted"
-                  >
-                    <div className="h-full w-full bg-gradient-to-br from-muted to-border" />
-                  </div>
-                ))}
+                {review.images ? (
+                  review.images.map((src: string, idx: number) => (
+                    <div
+                      key={idx}
+                      className="h-16 w-16 overflow-hidden rounded bg-muted"
+                    >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={src}
+                        alt={`Foto da avaliacao ${review.id} - imagem ${idx + 1}`}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                  ))
+                ) : (
+                  [1, 2, 3].slice(0, review.id === 3 ? 1 : review.id === 1 ? 3 : 2).map((img) => (
+                    <div
+                      key={img}
+                      className="h-16 w-16 overflow-hidden rounded bg-muted"
+                    >
+                      <div className="h-full w-full bg-gradient-to-br from-muted to-border" />
+                    </div>
+                  ))
+                )}
               </div>
             )}
 
