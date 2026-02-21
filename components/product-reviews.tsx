@@ -150,6 +150,10 @@ export function ProductReviews() {
       text: "Produto 100% original, fiz todos os testes, o da valvula que a principal tirando a tampa e o bico nao sendo reto, e com certeza original e o cheiro e muito bom falam muito da saida mas ate que nao achei ruim na saida nao mas depois de uns minutos de fato fica muito bom, podem comprar sem medo, e o produto foi enviado com cuidado enrolado no plastico bolha e ainda colocou algum cheirinho bom, aprovado!.",
       helpful: 39,
       hasImages: true,
+      images: [
+        "/images/review2-1.webp",
+        "/images/review2-2.webp",
+      ],
     },
     {
       id: 3,
