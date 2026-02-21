@@ -12,8 +12,8 @@ export function PurchaseSection() {
       <div className="px-4 pt-4">
         <div className="flex items-baseline gap-1">
           <span className="text-3xl font-light text-card-foreground">R$</span>
-          <span className="text-3xl font-light text-card-foreground">279</span>
-          <span className="text-base font-light text-card-foreground align-top">90</span>
+          <span className="text-3xl font-light text-card-foreground">149</span>
+          <span className="text-base font-light text-card-foreground align-top">99</span>
         </div>
         <p className="mt-0.5 text-sm text-muted-foreground">
           12x R$ 27<sup>38</sup>
