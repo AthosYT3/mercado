@@ -162,6 +162,9 @@ export function ProductReviews() {
       text: "O perfume e simplesmente maravilhoso, em relacao ao creedy aventury, 9. 4 e a minha nota super recomendo.",
       helpful: 25,
       hasImages: true,
+      images: [
+        "/images/review3-1.webp",
+      ],
     },
   ]
 
