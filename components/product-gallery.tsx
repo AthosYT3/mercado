@@ -5,7 +5,7 @@ import { Heart, Share2, ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 
 const productImages = [
-  "/images/perfume.jpg",
+  "/images/perfume.webp",
 ]
 
 export function ProductGallery() {
