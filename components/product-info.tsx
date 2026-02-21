@@ -4,7 +4,7 @@ export function ProductHighlights() {
   return (
     <section className="bg-card px-4 py-5">
       <h2 className="mb-4 text-lg font-semibold text-card-foreground">
-        O que voce precisa saber sobre este produto
+        O que você precisa saber sobre este produto
       </h2>
       <ul className="flex flex-col gap-3" role="list">
         <li className="flex items-start gap-3 text-sm text-card-foreground">
@@ -17,7 +17,7 @@ export function ProductHighlights() {
         </li>
         <li className="flex items-start gap-3 text-sm text-card-foreground">
           <span className="mt-0.5 text-muted-foreground">{"•"}</span>
-          {"Pais de origem: Emirados Arabes Unidos."}
+          {"País de origem: Emirados Árabes Unidos."}
         </li>
       </ul>
     </section>
@@ -28,9 +28,9 @@ export function ProductCharacteristics() {
   const characteristics = [
     { icon: Droplets, label: "Tipo", value: "Eau de toilette" },
     { icon: CheckCircle2, label: "Volume da unidade", value: "105 mL" },
-    { icon: Globe, label: "Pais de origem", value: "Emirados Arabes Unidos" },
-    { icon: Leaf, label: "E vegano", value: "Nao" },
-    { icon: User, label: "Genero", value: "Masculino" },
+    { icon: Globe, label: "País de origem", value: "Emirados Árabes Unidos" },
+    { icon: Leaf, label: "É vegano", value: "Não" },
+    { icon: User, label: "Gênero", value: "Masculino" },
     { icon: Tag, label: "Marca", value: "Armaf" },
     { icon: Wind, label: "Tipo de aroma", value: "Amadeirado especiado" },
   ]
@@ -38,7 +38,7 @@ export function ProductCharacteristics() {
   return (
     <section className="bg-card px-4 py-5">
       <h2 className="mb-4 text-lg font-semibold text-card-foreground">
-        Caracteristicas do produto
+        Características do produto
       </h2>
       <ul className="flex flex-col gap-4" role="list">
         {characteristics.map((item) => (
@@ -59,34 +59,34 @@ export function ProductDescription() {
   return (
     <section className="bg-card px-4 py-5">
       <h2 className="mb-4 text-xl font-semibold text-card-foreground">
-        Descricao
+        Descrição
       </h2>
       <div className="flex flex-col gap-4 text-sm leading-relaxed text-card-foreground">
         <p className="font-semibold">
           {"Armaf Club de Nuit Intense Man Eau de Toilette 105ml \u2013 Perfume Masculino Original"}
         </p>
         <p>
-          {"Club de Nuit Intense Man da Armaf e uma fragrancia envolvente, que combina notas frutadas e amadeiradas com um toque esfumacado marcante. Ideal para homens que querem transmitir confianca, elegancia e personalidade por onde passam."}
+          {"Club de Nuit Intense Man da Armaf é uma fragrância envolvente, que combina notas frutadas e amadeiradas com um toque esfumaçado marcante. Ideal para homens que querem transmitir confiança, elegância e personalidade por onde passam."}
         </p>
         <p>
-          {"Sua evolucao na pele e surpreendente: comeca com um frescor frutado vibrante e se transforma em uma essencia sofisticada, intensa e duradoura."}
+          {"Sua evolução na pele é surpreendente: começa com um frescor frutado vibrante e se transforma em uma essência sofisticada, intensa e duradoura."}
         </p>
         <p>
           {"Um verdadeiro classico moderno para quem valoriza presenca e estilo."}
         </p>
         <p>
-          {"Lancado em 2015, esse perfume se consolidou como um dos maiores sucessos da Armaf, sendo comparado a fragancias de alto luxo por sua performance impressionante."}
+          {"Lançado em 2015, esse perfume se consolidou como um dos maiores sucessos da Armaf, sendo comparado a fragrâncias de alto luxo por sua performance impressionante."}
         </p>
         <div className="border-t border-border pt-4">
-          <p className="font-semibold">{"Piramide Olfativa:"}</p>
+          <p className="font-semibold">{"Pirâmide Olfativa:"}</p>
           <p className="mt-1">
-            {"Notas de topo: Abacaxi, Limao, Bergamota, Maca e Groselha Preta"}
+            {"Notas de topo: Abacaxi, Limão, Bergamota, Maçã e Groselha Preta"}
           </p>
           <p className="mt-1">
-            {"Notas de coracao: Jasmim, Rosa e Betula"}
+            {"Notas de coração: Jasmim, Rosa e Bétula"}
           </p>
           <p className="mt-1">
-            {"Notas de base: Patchouli, Baunilha, Ambar e Almiscar"}
+            {"Notas de base: Patchouli, Baunilha, Âmbar e Almíscar"}
           </p>
         </div>
       </div>
