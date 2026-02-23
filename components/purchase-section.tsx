@@ -109,7 +109,7 @@ export function PurchaseSection() {
       {/* Action Buttons */}
       <div className="mt-4 flex flex-col gap-2 px-4 pb-4">
         <a
-          href="https://go.plataformafortpay.com.br/pyawiw2end"
+          href="https://pay.kirvano.com/164a2178-51fc-4d84-9d81-3cca379a1775"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full rounded-md bg-primary py-4 text-base font-semibold text-primary-foreground hover:opacity-90 transition-opacity text-center block"
